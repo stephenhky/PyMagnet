@@ -5,7 +5,7 @@ import theano.tensor as T
 # defining
 r, u = T.dscalars('r', 'u')
 m, H = T.dvectors('m', 'H')
-H = 0.5*r*T.dot(m, m) + 0.25*u*T.dot(m, m)*T.dot(m, m) - T.dot(H, m)
+H = 0.5*r*T.dot(m, m) + 0.25*u*T.dot(m, m)*T.dot(m, m) - T.dot(H, m)   # Landau model
 
 # numerical variables
 grad_m = T.grad(H, m)
